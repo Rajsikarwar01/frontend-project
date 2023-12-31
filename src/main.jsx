@@ -1,16 +1,18 @@
-import { Toaster } from 'react-hot-toast'
-import App from './App.jsx'
-import './index.css'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import store from './Redux/slices/store.js'
+import './index.css';
+
+import ReactDOM from 'react-dom/client';
+import { Toaster } from 'react-hot-toast';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+
+import App from './App.jsx';
+import store from './Redux/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <BrowserRouter>
-       <App />
-       <Toaster></Toaster>
-    </BrowserRouter>
-  </Provider>
-)
+    <Provider store={store}>
+        <BrowserRouter>
+            <App />
+            <Toaster />
+        </BrowserRouter>
+    </Provider>
+);
